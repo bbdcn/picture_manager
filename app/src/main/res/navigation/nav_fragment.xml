@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_fragment"
-    app:startDestination="@id/browserFragment">
+    app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/browserFragment"
@@ -28,4 +28,16 @@
         android:name="com.team15.picture_manager.ui.EditFragment"
         android:label="fragment_edit"
         tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.team15.picture_manager.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_browserFragment"
+            app:destination="@id/browserFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_checkFragment"
+            app:destination="@id/checkFragment" />
+    </fragment>
 </navigation>
