@@ -19,5 +19,45 @@
         android:src="@drawable/student"
         android:layout_below="@+id/text_photos_1"
         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_photos_2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/text_photos_1"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/imageView_photos_1"
+        android:src="@drawable/student1" />
+
+    <ImageView
+        android:id="@+id/imageView_photos_3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/student2"
+        android:layout_below="@id/text_photos_1"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/imageView_photos_2"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_photos_4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/student3"
+        android:layout_below="@id/text_photos_1"
+        android:layout_toRightOf="@id/imageView_photos_3"
+        android:layout_marginLeft="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_photos_5"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/imageView_photos_1"
+        android:src="@drawable/student4"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         />
 </RelativeLayout>
