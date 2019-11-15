@@ -4,15 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.BrowserFragment">
+    tools:context=".ui.brower_fragment.BrowserFragment">
 
+    <TextView
+        android:id="@+id/textView_brower_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="students"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_alignBottom="@+id/textView_brower_1"
+        />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_brower_1"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:background="@drawable/student"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_below="@id/textView_brower_1"
+        android:layout_marginTop="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_brower_2"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/textView_brower_1"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/imageView_brower_1"
+        android:src="@drawable/student1" />
+
+    <ImageView
+        android:id="@+id/imageView_brower_3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/student2"
+        android:layout_below="@id/textView_brower_1"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/imageView_brower_2"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_brower_4"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/student3"
+        android:layout_below="@id/textView_brower_1"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/imageView_brower_3"
+        android:layout_marginLeft="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView_brower_5"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/imageView_brower_1"
+        android:src="@drawable/student4"
+        android:layout_marginTop="8dp"
         />
 </RelativeLayout>

@@ -1,7 +1,9 @@
-package com.team15.picture_manager.ui;
+package com.team15.picture_manager.ui.favorite_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -9,9 +11,12 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.team15.picture_manager.R;
+import com.team15.picture_manager.ui.activity.MainActivity;
 
 public class FavoriteFragment extends Fragment {
     public FavoriteFragment(){
@@ -27,6 +32,11 @@ public class FavoriteFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         ImageView imageView_favorite_1 = view.findViewById(R.id.imageView_favorite_1);
-        imageView_favorite_1.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_mainFragment_to_checkFragment));
+        imageView_favorite_1.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_favoriteFragment_to_checkFragment));
+
+        /*   设置底部导航栏显示  */
+        MainActivity mainActivity = (MainActivity) getActivity();
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) mainActivity.findViewById(R.id.nav_view);
+        bottomNavigationView.setVisibility(View.VISIBLE);
     }
 }

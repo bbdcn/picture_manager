@@ -1,4 +1,4 @@
-package com.team15.picture_manager.ui;
+package com.team15.picture_manager.ui.check_fragment;
 
 
 import android.os.Bundle;
@@ -13,7 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.team15.picture_manager.R;
+import com.team15.picture_manager.ui.activity.MainActivity;
 
 
 /**
@@ -37,6 +39,11 @@ public class CheckFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        /*   设置底部导航栏隐藏  */
+        MainActivity mainActivity = (MainActivity) getActivity();
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) mainActivity.findViewById(R.id.nav_view);
+        bottomNavigationView.setVisibility(View.GONE);
 
         /*   点击编辑按钮跳转向此图片的编辑界面  */
         Button btn_edit = view.findViewById(R.id.btn_edit);
@@ -64,6 +71,5 @@ public class CheckFragment extends Fragment {
                 /*   功能待实现 */
             }
         });
-
     }
 }

@@ -1,4 +1,4 @@
-package com.team15.picture_manager.ui;
+package com.team15.picture_manager.ui.brower_fragment;
 
 
 import android.os.Bundle;
@@ -13,7 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.team15.picture_manager.R;
+import com.team15.picture_manager.ui.activity.MainActivity;
 
 
 /**
@@ -42,12 +44,16 @@ public class BrowserFragment extends Fragment {
         /*    此处待实现功能使用适配器将所有图片的缩略图依次填充至fragment中
         *     点击某个图片，应跳转至相应图片的原图显示界面
         * */
-        ImageView imageView = view.findViewById(R.id.imageView);
+        ImageView imageView = view.findViewById(R.id.imageView_brower_1);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(v).navigate(R.id.action_browserFragment_to_checkFragment);
             }
         });
+
+        MainActivity mainActivity = (MainActivity) getActivity();
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) mainActivity.findViewById(R.id.nav_view);
+        bottomNavigationView.setVisibility(View.GONE);
     }
 }

@@ -1,63 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_photos_1"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/text_photos_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="xx年xx月xx日" />
+
+        <ImageView
+            android:id="@+id/imageView_photos_1"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/text_photos_1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/student" />
+
+        <ImageView
+            android:id="@+id/imageView_photos_2"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/text_photos_1"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/imageView_photos_1"
+            android:src="@drawable/student1" />
+
+        <ImageView
+            android:id="@+id/imageView_photos_3"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/text_photos_1"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/imageView_photos_2"
+            android:src="@drawable/student2" />
+
+        <ImageView
+            android:id="@+id/imageView_photos_4"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/text_photos_1"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/imageView_photos_3"
+            android:src="@drawable/student3" />
+
+        <ImageView
+            android:id="@+id/imageView_photos_5"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/imageView_photos_1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/student4" />
+    </RelativeLayout>
+
+    <!--
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view_photos"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:text="xx年xx月xx日"
-        />
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+        -->
 
-    <ImageView
-        android:id="@+id/imageView_photos_1"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/student"
-        android:layout_below="@+id/text_photos_1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp"
-        />
-
-    <ImageView
-        android:id="@+id/imageView_photos_2"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_below="@id/text_photos_1"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/imageView_photos_1"
-        android:src="@drawable/student1" />
-
-    <ImageView
-        android:id="@+id/imageView_photos_3"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/student2"
-        android:layout_below="@id/text_photos_1"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/imageView_photos_2"
-        />
-
-    <ImageView
-        android:id="@+id/imageView_photos_4"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:src="@drawable/student3"
-        android:layout_below="@id/text_photos_1"
-        android:layout_toRightOf="@id/imageView_photos_3"
-        android:layout_marginLeft="5dp"
-        />
-
-    <ImageView
-        android:id="@+id/imageView_photos_5"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_below="@id/imageView_photos_1"
-        android:src="@drawable/student4"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        />
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

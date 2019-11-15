@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_photos"
+        android:id="@+id/photosFragment"
         android:icon="@drawable/ic_insert_photo_24px"
         android:title="@string/title_photos" />
 
     <item
-        android:id="@+id/navigation_albums"
+        android:id="@+id/albumsFragment"
         android:icon="@drawable/ic_collections_24px"
         android:title="@string/title_albums" />
 
     <item
-        android:id="@+id/navigation_favorite"
+        android:id="@+id/favoriteFragment"
         android:icon="@drawable/ic_star_24px"
-        android:title="@string/title_collection" />
+        android:title="@string/title_favorite" />
 
 </menu>
