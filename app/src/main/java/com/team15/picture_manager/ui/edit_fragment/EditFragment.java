@@ -1,6 +1,8 @@
 package com.team15.picture_manager.ui.edit_fragment;
 
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,13 +18,14 @@ import android.widget.Button;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.team15.picture_manager.R;
 import com.team15.picture_manager.ui.activity.MainActivity;
+import com.team15.picture_manager.util.SimpleDoodleView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class EditFragment extends Fragment {
-
+    Bitmap bitmap = null;
 
     public EditFragment() {
         // Required empty public constructor
@@ -45,23 +48,36 @@ public class EditFragment extends Fragment {
         BottomNavigationView bottomNavigationView = (BottomNavigationView) mainActivity.findViewById(R.id.nav_view);
         bottomNavigationView.setVisibility(View.GONE);
 
-        /*   点击保存按钮，保存编辑后的图片  */
-        Button btn_save = view.findViewById(R.id.btn_save);
+        ViewGroup simpleContainer = (ViewGroup) view.findViewById(R.id.container_simple_doodle);
+
+        bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.student);
+        SimpleDoodleView simpleDoodleView = new SimpleDoodleView(getActivity(),bitmap);
+
+        simpleContainer.addView(simpleDoodleView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+        /*Button btn_save = findViewById(R.id.btn_save);
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*   此处保存图片功能待编辑 */
-                Navigation.findNavController(v).navigateUp();
-            }
-        });
+                String dir = getApplicationContext().getFilesDir().getAbsolutePath() + "/student/";
+                String picName = "student";
 
-        /*   点击返回按钮，返回上一界面  */
-        Button btn_back2 = view.findViewById(R.id.btn_back2);
-        btn_back2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigateUp();
+                String state = Environment.getExternalStorageState();
+                //如果状态不是mounted，无法读写
+                if (!state.equals(Environment.MEDIA_MOUNTED)) {
+                    return;
+                }
+                try {
+                    File f = new File(dir + picName + ".png");//图片路径
+                    FileOutputStream out = new FileOutputStream(f);
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
+                    out.flush();
+                    out.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
             }
-        });
+        });*/
     }
 }

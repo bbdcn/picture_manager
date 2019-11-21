@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.edit_fragment.EditFragment">
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <FrameLayout
+        android:id="@+id/container_simple_doodle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/student" />
+        android:layout_height="366dp"
+        android:layout_weight="1"
+        android:background="#9BCD9B">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="编辑页面" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="涂鸦"
+            android:textColor="#FFF"
+            android:textSize="12dp" />
+    </FrameLayout>
 
     <Button
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:text="保存" />
 
-    <Button
-        android:id="@+id/btn_back2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/btn_save"
-        android:text="返回" />
-
-
-</RelativeLayout>
+</LinearLayout>

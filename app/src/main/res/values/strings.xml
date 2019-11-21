@@ -7,4 +7,9 @@
     <string name="title_photos">照片</string>
     <string name="title_albums">相册</string>
     <string name="title_favorite">收藏</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="splash_textview">当前应用缺少必要权限。请点击确认按钮授予文件读写权限。</string>
+    <string name="splash_btn_enter">确认</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
